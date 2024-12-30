@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.PGeror {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.Ttleror {
+    font-size: 11rem;
+    color: $primary-color;
+    margin-bottom: $spacing-medium;
+}
+
+.Txteror {
+    margin-bottom: 50px;
+    color: $primary-color;
+}
+
+@media (max-width: 768px) {
+    // Adjust for large phones
+    body {
+      font-size: 85%;
+    }
+  }
+  
+@media (max-width: 480px) {
+    // Adjust for small phones
+    body {
+      font-size: 80%;
+    }
+    #root {
+    min-height: 100vh;
+
+    .Ttleror {
+      font-size: 10rem;
+      color: #ff6060;
+      margin-bottom: 16px;
+  }
+}
+
+    
+}

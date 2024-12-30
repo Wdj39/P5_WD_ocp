@@ -1,0 +1,38 @@
+@use '../../styles/_variables' as vars;
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    background-color: vars.$secondary-color;
+    color: white;
+    text-align: center;
+    padding: vars.$spacing-medium;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 1300px) {
+    #root {
+        min-height: 100vh;
+    }
+}
+@media (max-width: 768px) {
+    // Adjust for large phones
+    body {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    // Adjust for small phones
+    body {
+        font-size: 80%;
+    }
+}
