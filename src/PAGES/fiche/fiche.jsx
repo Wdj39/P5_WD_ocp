@@ -26,7 +26,7 @@ function Fiche() {
     const host = dataFiche.hôte || { nom: "Hôte inconnu", image: "" };
     const location = dataFiche.location || "Emplacement non spécifié";
     const note = parseInt(dataFiche.note, 10) || 0;
-    const equipements = dataFiche[" équipements"] || [];
+    const equipements = dataFiche.équipements || [];
 
     // Composant pour le carrousel d'images
     function Slideshow() {
