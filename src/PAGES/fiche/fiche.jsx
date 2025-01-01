@@ -28,6 +28,7 @@ function Fiche() {
     const note = parseInt(dataFiche.note, 10) || 0;
     const equipements = dataFiche.équipements || [];
 
+
     // Composant pour le carrousel d'images
     function Slideshow() {
         const [currentIndex, setCurrentIndex] = useState(0); // État pour l'index de l'image actuelle
@@ -124,10 +125,18 @@ function Fiche() {
                         <Collapses context="fiche" name="Description" description={dataFiche.description} />
                     </div>
                     <div className='if2'>
-                        <Collapses
+                    <Collapses
                             context="fiche"
                             name="Équipements"
-                            description={equipements.length > 0 ? equipements.join(", ") : "Aucun équipement"}
+                            description={
+                                equipements.length > 0 ? (
+                                    <ul>
+                                        {equipements.map((item, index) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
+                                    </ul>
+                                ) : "Aucun équipement"
+                            }
                         />
                     </div>
                 </div>

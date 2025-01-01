@@ -152,6 +152,17 @@ body, html {
     flex-direction: column;
     min-height: 100vh;
 }
+.collapses ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* Permet d'avoir des puces pour les listes */
+    padding-left: 10px; /* Indente la liste */
+}
+
+.collapses li {
+    margin-bottom: 2px; /* Espacement entre les éléments */
+    font-size: 14px; /* Taille de police adaptée */
+}
 
 @media (max-width: 768px) {
     // Adjust for large phones
